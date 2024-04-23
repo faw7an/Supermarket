@@ -9,6 +9,7 @@ function authenticateUser(username, password) {
     return user;
 }
 
+// Handle form submission
 document.getElementById('loginForm').addEventListener('submit', function (e) {
     e.preventDefault();
 
