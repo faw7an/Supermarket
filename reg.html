@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Page</title>
+    <link rel="stylesheet" href="styles.css"> <!-- You can link an external stylesheet here for styling -->
+</head>
+
+<body>
+    <div class="container">
+        <h2>Register</h2>
+        <form id="registerForm" action="register.php" method="post">
+            <!-- Replace "register.php" with the actual file or URL to handle form submission -->
+            <div class="form-group">
+                <label for="username">Username:</label>
+                <input type="text" id="username" name="username" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            <div class="form-group">
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" required>
+            </div>
+            <button type="submit">Register</button>
+        </form>
+    </div>
+
+    <script>
+
+        // Function to register a new user
+        function registerUser(username, email, password) {
+            // Get existing users from local storage or initialize an empty array
+            let users = JSON.parse(localStorage.getItem('users')) || [];
+
+            // Check if username or email already exists
+            const existingUser = users.find(user => user.username === username || user.email === email);
+            if (existingUser) {
+                return { success: false, message: 'Username or email already exists' };
+            }
+
+            // Add new user to the users array
+            users.push({ username, email, password });
+
+            // Store updated users array back to local storage
+            localStorage.setItem('users', JSON.stringify(users));
+
+            return { success: true, message: 'User registered successfully' };
+        }
+
+        // Example usage:
+        // registerUser('user123', 'user123@example.com', 'password123');
+
+        let form = document.querySelector('#registerForm');
+        form.addEventListener('submit', function (e
+        ) {
+            e.preventDefault();
+
+            let username = document.querySelector('#username').value;
+            let email = document.querySelector('#email').value;
+            let pass = document.querySelector('#password').value;
+
+            let result = registerUser(username, email, pass);
+
+            // redirect to index.html if successful
+            if (result.success == true) {
+                window.location.href = "login.html";
+            } else {
+                alert("registration failed")
+            }
+
+        })
+    </script>
+</body>
+
+</html>
