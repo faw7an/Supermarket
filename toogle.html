@@ -1,0 +1,93 @@
+
+<style>
+    * {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  box-sizing: border-box;
+}
+
+body, html{
+  width: 100%;
+  height: 100%;
+}
+
+body {
+  display: flex;
+  background-color: red;
+  background-color: #fafafa;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  transition: background 0.2s linear;
+}
+
+body.dark {
+  background: #232c35;
+}
+
+#check-theme {
+  position: absolute;
+  opacity: 0;
+}
+
+.change-theme {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 50px;
+  height: 26px;
+  border-radius: 20px;
+  background: #111;
+  cursor: pointer;
+  padding: 5px;
+  transform: scale(1.5);
+}
+
+i.fa-moon {
+  color: #f1c40f;
+}
+
+i.fa-sun {
+  color: #f39c12;
+}
+
+.ball {
+  position: absolute;
+  background-color: #fff;
+  width: 22px;
+  height: 22px;
+  left: 2px;
+  border-radius: 50%; 
+  transform: translateX(0px);
+  transition: transform 0.2s linear;
+}
+
+#check-theme:checked + .change-theme .ball {
+  transform: translateX(24px);
+}
+</style>
+
+<body class="dark">
+    <div>
+      <input type="checkbox" id="check-theme">
+      <label for="check-theme" class="change-theme">
+        <i class="fas fa-moon"></i>
+        <i class="fas fa-sun"></i>
+        <div class="ball"></div>
+      </label>
+    </div>
+  <script src="https://kit.fontawesome.com/998c60ef77.js" crossorigin="anonymous">
+
+const checkToogleTheme = document.getElementById('check-theme')
+const body = document.querySelector('body');
+      
+checkToogleTheme.addEventListener('change', () => {       
+  if (checkToogleTheme.checked) {
+    body.classList.remove('dark')
+  } else{
+    body.classList.add('dark')
+  }
+})
+  </script>

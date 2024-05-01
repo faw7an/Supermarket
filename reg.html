@@ -6,6 +6,88 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Registration Page</title>
     <link rel="stylesheet" href="styles.css"> <!-- You can link an external stylesheet here for styling -->
+
+    <style>
+    body {
+    margin: 0;
+    padding: 0;
+    background: radial-gradient(circle, #1e5180, #141516);
+    color: white;
+    font-family: 'Times New Roman'; 
+}
+
+.container {
+    width: 350px;
+    height: 450px;
+    margin: 0 auto;
+    padding: 20px;
+    border-radius: 50px;
+    margin-top: 100px;
+    background: linear-gradient(145deg, #141516);
+    /* or backg black */
+    /*  background:black; */
+    box-shadow: 13px 13px 26px #185858, -13px -13px 26px #224b5e;
+}
+
+h2 {
+    text-align: center;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+input[type="text"],
+input[type="password"],
+input[type="email"] { /* Added input[type="email"] */
+    width: 100%;
+    padding: 10px;
+    background-color: transparent;
+    border: 1px solid #33797f;
+    border-radius: 20px;
+    box-sizing: border-box;
+}
+
+button {
+    width: 100%;
+    font-family: 'Times New Roman';
+    padding: 10px;
+    border: none;
+    color: white;
+    font-size: larger;
+    border-radius: 20px;
+    cursor: pointer;
+    margin-top: 20px;
+    margin-bottom: 18px;
+    background-image: linear-gradient(to left, #3498db, #62b561);
+    background-position: right;
+}
+
+button:hover {
+    background-position: left;
+    transition: background-position 0.5s ease-in;
+    transform: scale(1.01);
+    background-image: linear-gradient(to left, #62b561, #3498db);
+    box-shadow: 0 2px 5px rgba(12, 10, 10, 0.5);
+}
+
+.error {
+    color: red;
+    font-size: 14px;
+}
+
+.reset-pass {
+    color: white;
+    margin-left: 120px;
+    text-decoration: none;
+}
+
+    </style>
 </head>
 
 <body>
@@ -25,7 +107,10 @@
                 <label for="password">Password:</label>
                 <input type="password" id="password" name="password" required>
             </div>
-            <button type="submit">Register</button>
+            <input type="checkbox" id="check">By signing up, you agree to our <a href="https://www.jumia.co.ke/sp-terms-and-conditions/" style="color: white;"> Terms</a> ,<a href="https://www.jumia.co.ke/sp-privacy/" style="color: white;">Privacy Policy</a> and Cookies Policy .
+            <button type="submit" >Register</button>
+            <a href="" style="color: white; margin-left: 90px; text-decoration: none;">Have an account? Log in</a>
+
         </form>
     </div>
 
@@ -34,7 +119,8 @@
         // Function to register a new user
         function registerUser(username, email, password) {
             // Get existing users from local storage or initialize an empty array
-            let users = JSON.parse(localStorage.getItem('users')) || [];
+            let users = JSON.parse(localStorage.getItem('users')) || []; 
+            // this returns parse if true if false returns empty array  
 
             // Check if username or email already exists
             const existingUser = users.find(user => user.username === username || user.email === email);
@@ -62,14 +148,25 @@
             let username = document.querySelector('#username').value;
             let email = document.querySelector('#email').value;
             let pass = document.querySelector('#password').value;
-
+            let check = document.querySelector('#check').checked;
             let result = registerUser(username, email, pass);
 
             // redirect to index.html if successful
-            if (result.success == true) {
-                window.location.href = "login.html";
+            // if (result.success == true && check == true) {
+            //     window.location.href = "login.html";
+            // } else {
+            //     alert("registration failed")
+            // }
+            
+            if (check){
+                if (result.success) {
+                    alert(result.message);
+                    window.location.href = "login.html";
+                } else {
+                    alert(result.message);
+                }
             } else {
-                alert("registration failed")
+                alert("Please agree to the terms and conditions");
             }
 
         })

@@ -6,11 +6,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login Page</title>
     <link rel="stylesheet" href="login.css"> <!-- You can link an external stylesheet here for styling -->
+    <script src="login.js"></script> <!-- Link to external JavaScript file -->
+
 </head>
 
 <body>
+    
+    <!-- <div class="semi-circle">
+        <div class="semi-circle.top"></div>
+        <div class="semi-circle.bottom"></div>
+    </div> -->
+    
     <div class="container">
-        <h2>Login</h2>
+        <h2>Log in</h2>
         <form id="loginForm" action="#">
             <div class="form-group">
                 <label for="username">Username:</label>
@@ -20,12 +28,18 @@
                 <label for="password">Password:</label>
                 <input type="password" id="password" name="password" required>
             </div>
-            <button type="submit">Login</button>
+            <button class="log-in" type="submit">Log in</button>
+            <a href="" class="reset-pass">Forgot password?</a> <br>
+            <a href="" style="color: rgb(20, 160, 109); text-decoration: none; margin-left: 80px; ">Don't have an account? Sign up</a>
             <div id="error" class="error"></div>
         </form>
     </div>
 
-    <script src="login.js"></script> <!-- Link to external JavaScript file -->
 </body>
 
 </html>
+<!-- 
+    issues (no error mess wen entered wrong password or username)
+    
+
+ -->

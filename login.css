@@ -1,52 +1,102 @@
+ body{
+    margin: 0;
+    padding: 0;
+    background: radial-gradient(circle, #1e5180, #141516);
+    color: white;
+
+}
+ 
+ /* .semi-circle {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+.semi-circle.top {
+    top: 0;
+    height: 50%;
+    background: radial-gradient(circle at 50% 100%, transparent 50%, #ff7e5f 50%);
+}
+
+.semi-circle.bottom {
+    bottom: 0;
+    height: 50%;
+    background: radial-gradient(circle at 50% 0%, transparent 50%, #feb47b 50%);
+
+  } */
+
 .container {
-    width: 300px;
+    width: 350px;
+    height: 350px;
     margin: 0 auto;
     padding: 20px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    background-color: #f9f9f9;
+    border-radius: 15px;
+    margin-top: 100px;    
+    border-radius: 53px;
+    background: linear-gradient(145deg,transparent);
+    box-shadow:  13px 13px 26px #185858,
+                -13px -13px 26px #224b5e;
+                /* we'll choose btn two */
+                /* box-shadow: 5px 5px 8px rgba(165, 8, 168, 0.5);*/
 }
 
 h2 {
     text-align: center;
-    color: #333;
 }
 
 .form-group {
     margin-bottom: 15px;
+    
 }
 
 label {
     display: block;
     margin-bottom: 5px;
-    color: #666;
+    
 }
 
 input[type="text"],
 input[type="password"] {
     width: 100%;
     padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 3px;
+    background-color: transparent;
+    border: 1px solid #33797f;
+    border-radius: 20px;
     box-sizing: border-box;
 }
 
-button {
+.log-in{
     width: 100%;
+    font-family: 'Times New Roman';
     padding: 10px;
     border: none;
-    border-radius: 3px;
-    background-color: #007bff;
-    color: #fff;
+    color: white;
+    font-size: larger;
+    border-radius: 20px;
     cursor: pointer;
+    margin-top: 20px;
+    margin-bottom: 18px; 
+    background-image: linear-gradient(to left, #3498db, #62b561); 
+    background-position: right;
 }
 
-button:hover {
-    background-color: #0056b3;
+.log-in:hover {
+    background-position: left; 
+    transition: background-position 0.5s ease-in;
+    transform: scale(1.01);
+    background-image: linear-gradient(to left,#62b561, #3498db); 
+    box-shadow: 0 2px 5px rgba(12, 10, 10, 0.5);
 }
+
 
 .error {
     color: red;
     font-size: 14px;
-    margin-top: 5px;
+
+}
+
+.reset-pass{
+    color: white;
+    margin-left: 120px;
+    text-decoration: none;
 }
