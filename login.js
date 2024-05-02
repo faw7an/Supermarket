@@ -5,7 +5,7 @@ function authenticateUser(username, password) {
 
     // Find user with matching username and password
     const user = users.find(user => user.username === username && user.password === password);
-    console.log(user);
+    // console.log(user);
     return user;
 }
 
@@ -29,3 +29,4 @@ document.getElementById('loginForm').addEventListener('submit', function (e) {
     }
 });
 
+// rediration after login error check
