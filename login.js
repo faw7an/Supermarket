@@ -7,8 +7,8 @@ function authenticateUser(username, password) {
     const user = users.find(user => user.username === username && user.password === password);
     // console.log(user);
     return user;
-}  
-
+}   
+   
 // Handle form submission
 document.getElementById('loginForm').addEventListener('submit', function (e) {
     e.preventDefault();
