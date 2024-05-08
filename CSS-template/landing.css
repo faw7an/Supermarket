@@ -1,0 +1,259 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.social-icons {
+    margin: 20px 0;
+}
+
+.social-icons a {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    color: white;
+    height: 40px;
+    margin: 0 3px;
+    border: 1px solid #ccc;
+    border-radius: 20%;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+a {
+    text-decoration: none;
+}
+
+.container-footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    /* Three columns */
+    grid-template-rows: auto;
+    /* Let rows adjust based on content */
+}
+
+.head {
+    display: flex;
+    background-image: linear-gradient(to left,#419cbd, #0b0e0f); 
+    padding: 20px;
+    color: white;
+
+    /* flex-direction: row; */
+    /* padding-right:50px; */
+
+}
+
+
+/* .brand-name{
+    padding-right: 50px;
+} */
+
+
+.head-list {
+    display: flex;
+    flex-direction: row;
+    padding-left: 50px;
+    position: fixed;
+    right: 0;
+    color: white;
+    
+
+}
+.head-list li{
+    list-style-type: none;
+    padding: 10px;
+
+}
+
+.head-list li a{
+    color: white;
+}
+
+
+#head-list-icons{
+    color:white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-decoration: none;
+    display: inline-block;
+    padding-right: 10px;
+}
+
+.nav-snippet ul{
+    display: flex; /* Use flexbox */
+    flex-direction: row;
+    list-style-type: none;
+    justify-content: center;
+    background-image: linear-gradient(to left,#419cbd, #0b0e0f);
+    margin-left: 300px;
+    margin-right: 200px;
+    border-radius: 0 0 100px 100px ;
+    
+    
+}
+
+.nav-snippet ul li{
+    padding: 10px;
+    margin: 5px;
+    
+  
+    
+}
+.nav-snippet ul li a{
+    color: white;
+}
+
+
+.nav-snippet ul li a:hover{
+    color: black;
+    background-color: white;
+        
+}
+
+.main{
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    padding-top: 100px;
+    padding-bottom: 100px;
+    padding-left: 50px;
+    padding-right: 50px;
+    
+    
+}
+
+.main p{
+    padding-bottom: 50px;
+    
+}
+@media screen and (max-width: 600px) {
+    .head-list {
+        display: none;
+    }
+    .nav-snippet ul{
+        display: none;
+    }
+    .main{
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+    .main p{
+        padding-bottom: 20px;
+    }
+}
+
+
+.get-started{
+    background-color: #333;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-decoration: none;
+    margin-top: 20px;
+    display: inline-block;
+    transition: background-color 0.3s;
+    padding: 20px 60px 20px 60px;
+}
+
+.get-started:hover {
+    background-position: left; 
+    transition: background-position 0.5s ease-in;
+    transform: scale(1.01);
+    background-image: linear-gradient(to left,#62b561, #3498db); 
+    box-shadow: 0 2px 5px rgba(12, 10, 10, 0.5);
+}
+
+.container-footer{
+    color: white;
+    padding-top: 20px;
+    padding-bottom: 0;
+    background-image: linear-gradient(60deg,#162125, #062f3c);
+}
+
+.col1{
+    position: relative;
+    bottom: 0;
+    list-style: none;
+    color: white;
+    
+}
+
+.sub-col1 li a{
+    color: white;
+}
+
+
+input[type="text"]{
+    width: 70%;
+    padding: 10px;
+    background-color: transparent;
+    border: 1px solid white;
+    border-radius: 20px;
+    color: white;
+    box-sizing: border-box;
+}
+input::placeholder {
+    color: white;
+}
+
+.form-news{
+    padding-top: 10px;
+}
+
+
+#subscribe{
+    width: 50%;
+    font-family: 'Times New Roman';
+    padding: 10px 20px 10px 20px;
+    border: none;
+    color: white;
+    font-size: larger;
+    border-radius: 20px;
+    cursor: pointer;
+    margin-top: 20px;
+    margin-bottom: 18px; 
+    background-image: linear-gradient(45deg, #111b21, #505a50); 
+    background-position: right;
+}
+
+
+#subscribe:hover {
+    background-position: left; 
+    transition: background-position 0.5s ease-in;
+    transform: scale(1.01);
+    background-image: linear-gradient(45deg, #505a50, #111b21); 
+    /* box-shadow: 0 2px 5px rgba(12, 10, 10, 0.5); */
+}
+
+#subscribe:active{
+    transform: scale(0.9);
+}
+/* 
+.vert{
+        
+        border-right: 1px solid black; 
+        height: 100px; 
+        color: white;
+    
+} */
+
+
+
+/* will deal with responsive */
+
