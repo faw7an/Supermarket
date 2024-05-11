@@ -203,6 +203,57 @@ document.addEventListener('DOMContentLoaded', function () {
             });
         });
     });
+
+    // search bar
+
+    
+        const searchBtn = document.getElementById('searchBtn');
+        const searchInput = document.getElementById('searchInput');
+    
+        searchBtn.addEventListener('click', function () {
+            const searchTerm = searchInput.value.trim();
+            if (searchTerm !== '') {
+                // Perform search operation or redirect to search results page
+                alert('Searching for: ' + searchTerm);
+                window.location.href = `results.
+                html?search=${searchTerm}`;
+            } else {
+                alert('Please enter a search term.');
+            }
+        });
+    
+        // Enable pressing 'Enter' key to trigger search
+        searchInput.addEventListener('keypress', function (e) {
+            if (e.key === 'Enter') {
+                searchBtn.click();
+            }
+        });
+
+
+    // filter by category
+    const filterBtns = document.querySelectorAll('.filter-btn');
+    const productCards = document.querySelectorAll('.card');
+
+    filterBtns.forEach(btn => {
+        btn.addEventListener('click', () => {
+            const category = btn.dataset.category;
+
+            productCards.forEach(card => {
+                if (category === 'all') {
+                    card.style.display = 'block';
+                } else {
+                    if (card.classList.contains(category)) {
+                        card.style.display = 'block';
+                    } else {
+                        card.style.display = 'none';
+                    }
+                }
+            });
+        });
+    });
+
+    
+
 });
 
 
