@@ -39,7 +39,7 @@ document.getElementById('loginForm').addEventListener('submit', function (e) {
     // If user is authenticated, redirect to dashboard.html
     if (user) {
         alert('Login successful');
-        window.location.href = 'index.html'; // Redirect to dashboard page
+        window.location.href = 'home.html'; // Redirect to dashboard page
     } else {
       alert('Invalid username or password');
     }
