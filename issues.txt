@@ -5,7 +5,7 @@
 5.link icons 
 6.footer links
 7.wen reg but no user shld say not registered ***
-
+8.responsiveness on mobile
 
 /////
 pages completed:
