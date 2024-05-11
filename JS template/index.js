@@ -9,12 +9,14 @@ document.addEventListener('DOMContentLoaded', function () {
         item.classList.add("card");
 
         let html = `
+        <div class="card-wrap">
         <img src="${image}" alt="${name}" class="card-img">
         <div class="card-content">
             <h2 class="card-title">${name}</h2>
             <p class="card-text">${desc}</p>
             <h3>Price: $${price}</h3>
             <a href="#" class="btn">Add to cart <i class="fa-solid fa-cart-shopping"></i></a>
+        </div>
         </div>
     `;
 
@@ -59,18 +61,6 @@ document.addEventListener('DOMContentLoaded', function () {
     );
 
     td_deals.append(
-        makeItem(
-            "Item 1",
-            "https://naivas.online/nakuru-westside/88448-medium_default/morning-harvest-super-fast-oats-sachet-1kg.jpg",
-            "Description of item 1",
-            20
-        ),
-        makeItem(
-            "Item 1",
-            "https://naivas.online/nakuru-westside/88448-medium_default/morning-harvest-super-fast-oats-sachet-1kg.jpg",
-            "Description of item 1",
-            20
-        ),
         makeItem(
             "Item 1",
             "https://naivas.online/nakuru-westside/88448-medium_default/morning-harvest-super-fast-oats-sachet-1kg.jpg",

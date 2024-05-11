@@ -1,7 +1,9 @@
 1.map if possible
 2.will deal with responsive 
 3.brand name + logo
-
+4.td-deals and elect responsiveness (index.html)
+5.link icons 
+6.footer links 
 /////
 pages completed:
 login + reg
@@ -12,6 +14,19 @@ uncompleted:
 product
 cart
 index
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

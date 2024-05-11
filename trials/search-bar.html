@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Search Bar</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet" href="../CSS-template/index.css">
+    <style>
+        body {
+            color: black;   
+        }
+
+        .search-container {
+    display: flex;
+    margin: 20px;
+    border: 1px solid #ccc;
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+#searchInput {
+    flex: 1;
+    padding: 10px;
+    border: none;
+    font-family: 'Montserrat', sans-serif;
+}
+
+#searchBtn {
+    background-color: #33b50e;
+    color: #fff;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#searchBtn:hover {
+    background-color: #0056b3;
+}
+
+#searchBtn:focus {
+    outline: none;
+}
+
+    </style>
+</head>
+
+<body>
+    <div class="search-container">
+        <input type="text" id="searchInput" placeholder="Search...">
+        <button id="searchBtn"><i class="fas fa-search"></i></button>
+    </div>
+
+    <script src="../JS template/index.js"></script>
+   <script>
+    document.addEventListener('DOMContentLoaded', function () {
+    const searchBtn = document.getElementById('searchBtn');
+    const searchInput = document.getElementById('searchInput');
+
+    searchBtn.addEventListener('click', function () {
+        const searchTerm = searchInput.value.trim();
+        if (searchTerm !== '') {
+            // Perform search operation or redirect to search results page
+            alert('Searching for: ' + searchTerm);
+        } else {
+            alert('Please enter a search term.');
+        }
+    });
+
+    // Enable pressing 'Enter' key to trigger search
+    searchInput.addEventListener('keypress', function (e) {
+        if (e.key === 'Enter') {
+            searchBtn.click();
+        }
+    });
+});
+
+   </script>
+</body>
+
+</html>
