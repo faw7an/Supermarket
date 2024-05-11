@@ -3,18 +3,22 @@
 3.brand name + logo
 4.td-deals and elect responsiveness (index.html)
 5.link icons 
-6.footer links 
+6.footer links
+7.wen reg but no user shld say not registered ***
+
+
 /////
 pages completed:
 login + reg
 landing
+
 
 //////
 uncompleted:
 product
 cart
 index
-
+path: https://faw7an.github.io/Supermarket/HTML%20template/
 
 
 
