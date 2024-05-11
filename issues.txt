@@ -12,3 +12,87 @@ uncompleted:
 product
 cart
 index
+
+
+
+// Function to create a product card
+function makeItem(product) {
+  let item = document.createElement("div");
+  item.classList.add("card");
+
+  let html = `
+    <img src="${product.image}" alt="${product.name}" class="card-img">
+    <div class="card-content">
+      <h2 class="card-title">${product.name}</h2>
+      <p class="card-text">${product.desc}</p>
+      <h3>Price: $${product.price}</h3>
+      <a href="#" class="btn">Read More</a>
+    </div>
+  `;
+
+  item.innerHTML = html;
+  return item;
+}
+
+// Get the container elements
+let container = document.getElementById('container');
+let tdDeals = document.getElementById('td-deals');
+
+// Loop through products and create cards
+products.forEach(product => {
+  let card = makeItem(product);
+  container.appendChild(card); // Append to featured products
+});
+
+// Alternatively, append cards to "Today's Deals" section
+// tdDeals.appendChild(makeItem(product));
+
+
+///////////
+
+
+<!-- <div class="">
+    <img src="https://m.media-amazon.com/images/I/61P7hqIHrdL._SX3000_.jpg"
+        alt="Image" class="card-img">
+    <div class="card-content">
+        <h2 class="card-title">Card Title</h2>
+        <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+        <a href="#" class="btn">Read More</a>
+    </div>
+</div> 
+--> -->
+
+<!-- <div class="card-container">
+            <div class="card">
+                <img src="https://balaan.com/cdn/shop/files/6e1c92bec4d9d2f5837538de258a3604c13144fc507719314c50d04e83341092.jpg?v=1715328154"
+                    alt="Image" class="card-img">
+                <div class="card-content">
+                    <h2 class="card-title">Card Title</h2>
+                    <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                    <a href="#" class="btn">Read More</a>
+                </div>
+            </div>
+            <div class="card">
+                <img src="https://balaan.com/cdn/shop/files/6e1c92bec4d9d2f5837538de258a3604c13144fc507719314c50d04e83341092.jpg?v=1715328154"
+                    alt="Image" class="card-img">
+                <div class="card-content">
+                    <h2 class="card-title">Card Title</h2>
+                    <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                    <a href="#" class="btn">Read More</a>
+                </div>
+            </div>
+            <div class="card">
+                <img src="https://m.media-amazon.com/images/I/61P7hqIHrdL._SX3000_.jpg" alt="Image" class="card-img">
+                <div class="card-content">
+                    <h2 class="card-title">Card Title</h2>
+                    <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                    <a href="#" class="btn">Read More</a>
+                </div>
+            </div>
+        </div> 
+    
+    
+    
+
+    
+    -->
