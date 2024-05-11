@@ -1,3 +1,14 @@
 1.map if possible
 2.will deal with responsive 
-3.
+3.brand name + logo
+
+/////
+pages completed:
+login + reg
+landing
+
+//////
+uncompleted:
+product
+cart
+index

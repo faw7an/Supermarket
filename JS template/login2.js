@@ -84,17 +84,11 @@ document.getElementById('loginForm').addEventListener('submit', function (e) {
             // let check = document.querySelector('#check').checked;
             let result = registerUser(username, email, pass);
 
-            // redirect to index.html if successful
-            // if (result.success == true && check == true) {
-            //     window.location.href = "login.html";
-            // } else {
-            //     alert("registration failed")
-            // }
-            
+
             // if (check){
                 if (result.success) {
                     alert(result.message);
-                    window.location.href = "login.html";
+                    container.classList.remove("active"); 
                 } else {
                     alert(result.message);
                 }
