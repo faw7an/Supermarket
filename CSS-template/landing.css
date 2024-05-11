@@ -118,7 +118,6 @@ a {
     justify-content: center;
     background-image: linear-gradient(to left,#419cbd, #0b0e0f);
     margin-left: 300px;
-    
     margin-right: 200px;
     border-radius: 0 0 100px 100px ;
     
@@ -185,11 +184,6 @@ a {
     }
 }
 
-.animated-text {
-    padding-top: 100px;
-    display: inline-block;
-    color: #0056b3;
-}
 
 .animated-text span {
     display: inline-block;
@@ -197,6 +191,19 @@ a {
     font-size: 80px;
     font-weight: bolder;
     animation: letterAnimation 3s ease-in-out infinite;
+}
+.animated-text {
+    padding-top: 100px;
+    display: inline-block;
+    color: #0056b3;
+    position: relative;
+    z-index: 1;
+}
+
+.nav-snippet {
+    margin-bottom: 30px;
+    position: relative;
+    z-index: 2;
 }
 
 .animated-text span:nth-child(1) {
