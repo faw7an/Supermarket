@@ -526,3 +526,28 @@ input::placeholder {
 a {
     text-decoration: none;
 }
+
+/* Add to cart button style */
+
+.btnCart{
+    width: 180px;
+    height: 40px;
+    position: relative;
+}
+
+.btnCart button{
+    background: #f83e25;
+    border: none;
+    padding: 10px 18px;
+    font-size: 0.9rem;
+    color: white;
+    cursor: pointer;
+    outline: none;
+    box-shadow: 0px 5px 5px rgb(145, 145, 145) ;
+}
+
+.minusBtn, .plusBtn{
+    display: none;
+    font-weight: 700;
+
+}

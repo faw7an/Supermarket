@@ -15,7 +15,13 @@ document.addEventListener('DOMContentLoaded', function () {
             <h2 class="card-title">${name}</h2>
             <p class="card-text">${desc}</p>
             <h3>Price: $${price}</h3>
-            <a href="#" class="btn">Add to cart <i class="fa-solid fa-cart-shopping"></i></a>
+            <div class="main">
+            <div class="btnCart">
+                <button class="minusBtn">-</button>
+                <button class="mainBtn">ADD TO CART</button>
+                <button class="plusBtn">+</button>
+            </div>
+        </div>
         </div>
         </div>
     `;
@@ -23,6 +29,7 @@ document.addEventListener('DOMContentLoaded', function () {
         item.innerHTML = html;
         return item;
     }
+
 
     // Get the container element
     let ft_prod = document.getElementById('ft-prod');
@@ -203,6 +210,53 @@ document.addEventListener('DOMContentLoaded', function () {
             });
         });
     });
+
+    // ADD TO CART JS
+    document.body.addEventListener('click', (event) => {
+        if (event.target.classList.contains('mainBtn')) {
+            const btn = event.target;
+            const mbtn = btn.previousElementSibling;
+            const pbtn = btn.nextElementSibling;
+
+            if (btn.innerText === 'ADD TO CART') {
+                btn.innerText = 1;
+                pbtn.style.display = 'inline-block';
+                mbtn.style.display = 'inline-block';
+            }
+        }
+
+        if (event.target.classList.contains('minusBtn')) {
+            const mbtn = event.target;
+            const btn = mbtn.nextElementSibling;
+            const pbtn = btn.nextElementSibling;
+
+            if (btn.innerText == 5) {
+                pbtn.style.display = 'inline-block';
+            }
+            if (btn.innerText < 2) {
+                btn.innerText = 'ADD TO CART';
+                pbtn.style.display = 'none';
+                mbtn.style.display = 'none';
+            } else {
+                btn.innerText = btn.innerText - 1;
+            }
+        }
+
+        if (event.target.classList.contains('plusBtn')) {
+            const pbtn = event.target;
+            const btn = pbtn.previousElementSibling;
+            const mbtn = btn.previousElementSibling;
+
+            btn.innerText = +(btn.innerText) + 1;
+
+            if (btn.innerText == 5) {
+                pbtn.style.display = 'none';
+            }
+        }
+    });
+
+     // <a href="#" class="btn">Add to cart <i class="fa-solid fa-cart-shopping"></i></a>
+
 
     // search bar
 
