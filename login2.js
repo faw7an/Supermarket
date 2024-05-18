@@ -1,3 +1,6 @@
+document.addEventListener('DOMContentLoaded', function () {
+        
+
 const container = document.getElementById('container');
 const loginBtn = document.getElementById('login');
 const registerBtn = document.getElementById('register');
@@ -97,3 +100,5 @@ document.getElementById('loginForm').addEventListener('submit', function (e) {
             // }
 
         })
+
+    });
