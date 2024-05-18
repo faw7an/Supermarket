@@ -1,0 +1,134 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="cart.css">
+</head>
+<body>
+    
+
+<div id="cart">
+    <h2>Shopping Cart</h2>
+    <ul id="cart-items">
+        <!-- Cart items will be dynamically added here -->
+    </ul>
+    <button id="checkoutBtn">Checkout</button>
+</div>
+
+
+
+
+
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+    // Select elements
+    const mainBtns = document.querySelectorAll('.mainBtn');
+    const cartItemsContainer = document.getElementById('cart-items');
+    const checkoutBtn = document.getElementById('checkoutBtn');
+
+    // Initialize cart
+    let cart = [];
+
+    // Function to add item to cart
+    function addItemToCart(name, price) {
+        const existingItem = cart.find(item => item.name === name);
+        if (existingItem) {
+            existingItem.quantity++;
+        } else {
+            cart.push({ name, price, quantity: 1 });
+        }
+        renderCart();
+    }
+
+    // Function to remove item from cart
+    function removeItemFromCart(name) {
+        cart = cart.filter(item => item.name !== name);
+        renderCart();
+    }
+
+    // Function to render cart items
+    function renderCart() {
+        cartItemsContainer.innerHTML = '';
+        cart.forEach(item => {
+            const li = document.createElement('li');
+            li.textContent = `${item.name} x ${item.quantity} - $${item.price * item.quantity}`;
+            cartItemsContainer.appendChild(li);
+        });
+    }
+
+    // Add event listeners to main buttons for adding items to cart
+    mainBtns.forEach(btn => {
+        btn.addEventListener('click', function () {
+            const card = btn.closest('.card');
+            const name = card.querySelector('.card-title').textContent;
+            const price = parseFloat(card.querySelector('.card-price').textContent.slice(8)); // Assuming price is in format "Price: $20"
+            addItemToCart(name, price);
+        });
+    });
+
+    // Add event listener to checkout button
+    checkoutBtn.addEventListener('click', function () {
+        // Perform checkout process, e.g., redirect to checkout page
+        alert('Redirecting to checkout...');
+        // Here, you can implement your checkout logic, like sending cart data to the server or redirecting to a checkout page.
+    });
+});
+
+    </script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- <html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>list</h1>
+            <div class="iconCart">
+                <i class="fa-solid fa-cart-shopping"></i>
+            <div class="totalQuantity">0</div>
+            </div>
+        </header>
+<div class="listProduct">
+    <div class="item">
+        <img src="./assets/" alt="image">
+        <h2>Product name</h2>
+        <div class="price">$50</div>
+        <button>Add To Cart</button>
+
+    </div>
+</div>
+
+    </div>
+</body>
+</html> -->

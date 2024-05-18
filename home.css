@@ -52,14 +52,16 @@
 
 
 
+*/
+
 .nav-snippet ul{
     display: flex; 
     flex-direction: row;
     list-style-type: none;
     justify-content: center;
-    background-image: linear-gradient(to left,#419cbd, #0b0e0f);
-    margin-left: 300px;
+    margin-left: 260px;
     margin-right: 200px;
+
     border-radius: 0 0 100px 100px ;
     
     
@@ -73,18 +75,20 @@
     
 }
 .nav-snippet ul li a{
-    color: white;
-    padding: 15px;
-    border-radius: 50px;
+    color: black;
+    padding: 10px;
     transition: color 0.4s ease-in-out, background-color 0.4s ease-in-out; 
 }
 
 
 .nav-snippet ul li a:hover{
     color: black;
+    /* padding-right: 8px;
+    padding-left: 8px; */
     background-color: white;
+    /* border: 1px solid #061423; */
         
-} */
+} 
 
 .hero {
     background-image: url('https://naivas.online/nakuru-westside/modules/zoneslideshow/views/img/slideImages/1710842011.jpg');
@@ -551,3 +555,6 @@ a {
     font-weight: 700;
 
 }
+
+
+/* cart */
