@@ -537,12 +537,16 @@ a {
     width: 180px;
     height: 40px;
     position: relative;
+    margin-left: 40px;
+    margin-top: 10px;
+    
 }
 
 .btnCart button{
+    border-radius: 30px;
     background: #f83e25;
     border: none;
-    padding: 10px 18px;
+    padding: 10px 20px 10px 20px;
     font-size: 0.9rem;
     color: white;
     cursor: pointer;

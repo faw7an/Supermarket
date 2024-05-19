@@ -11,9 +11,11 @@ document.addEventListener('DOMContentLoaded', function () {
         let html = `
         <div class="card-wrap">
         <img src="${image}" alt="${name}" class="card-img">
-        <div class="card-content">
+        <div class="card-content" style="background-color:#F6F5F5">
+        <div>
             <h2 class="card-title">${name}</h2>
             <p class="card-text">${desc}</p>
+        </div>
             <h3>Price: $${price}</h3>
             <div class="main">
             <div class="btnCart">
