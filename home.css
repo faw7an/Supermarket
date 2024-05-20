@@ -7,9 +7,11 @@
     padding: 0;
     box-sizing: border-box;
     font-family: 'Montserrat', sans-serif;
-
 }
-
+body {
+    overflow-x: hidden;
+    position: relative;
+}
 /* 
 
 .head {
@@ -80,16 +82,92 @@
     transition: color 0.4s ease-in-out, background-color 0.4s ease-in-out; 
 }
 
-
 .nav-snippet ul li a:hover{
     color: black;
     /* padding-right: 8px;
     padding-left: 8px; */
     background-color: white;
+    border-top: 1.5px solid#061423;
+    border-radius: 20px;
+    /* box-shadow: inset 0px 3px 10px grey; */
     /* border: 1px solid #061423; */
         
 } 
 
+.nav-snippet ul li a i{
+    margin-right: 5px;
+}
+
+
+/* CART SECTION */
+.cart-checkout{
+    width: 350px;
+    position: fixed;
+    z-index: 1000;
+    right: 0px;
+    top: 0;
+    background-color: whitesmoke;
+    padding: 30px;
+    height:630px;
+    transform: translateX(360px);
+    transition: transform 1s ease;
+}
+
+.cart-checkout.open {
+    display: block;
+    transform: translateX(0%);
+    transition: transform 1s ease;
+}
+
+
+.checkout{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+    background-color:#7EC015;
+    border: none;
+    padding: 5px 20px 5px 20px;
+    color: white;
+    font-size: 15px;
+    border-radius: 3px;
+    width: 150px;
+    color: white;
+}
+
+.overlay {
+    background-color: #0614235f;
+    z-index: 1000;
+    position: absolute;
+    transform: translateX(100%);
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+}
+.overlay.open{
+    transform: translateX(0%);
+}
+
+.emptycart{
+    margin-top: 10px;
+    background-color:#7EC015;
+    border: none;
+    padding: 5px 20px 5px 20px;
+   color: white;
+    font-size: 15px;
+    border-radius: 3px;
+    width: 150px;
+}
+
+ .emptycart:hover{
+    background-color:#72B20C;
+    color: white;
+}  
+ .checkout:hover{
+    background-color:#72B20C;
+    color: white;}
 .hero {
     background-image: url('https://naivas.online/nakuru-westside/modules/zoneslideshow/views/img/slideImages/1710842011.jpg');
     /* Specify the URL of your background image */
@@ -244,6 +322,8 @@
 
 #elect .card-content {
     margin-top: 120px;
+    border-radius: 20px 0 0 20px;
+    padding-left: 40px;
 }
 /* end of electronic formating section */
 
@@ -273,6 +353,8 @@
 
 #td-deals .card-content {
     margin-top: 120px;
+    border-radius: 20px 0 0 20px;
+    padding-left: 40px;
 }
 
 

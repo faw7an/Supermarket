@@ -16,7 +16,7 @@ document.addEventListener('DOMContentLoaded', function () {
             <h2 class="card-title">${name}</h2>
             <p class="card-text">${desc}</p>
         </div>
-            <h3>Price: $${price}</h3>
+            <h3 class="price" style="color:#63AC96">KES ${price}.00</h3>
             <div class="main">
             <div class="btnCart">
                 <button class="minusBtn">-</button>
@@ -200,8 +200,8 @@ document.addEventListener('DOMContentLoaded', function () {
         product.addEventListener('mouseover', () => {
             productContainers.forEach(otherProduct => {
                 if (otherProduct !== product) {
-                    otherProduct.style.opacity = 0.5; 
-                    otherProduct.style.transition = '0.5s ease-in' ;                   
+                    otherProduct.style.opacity = 0.5;
+                    otherProduct.style.transition = '0.5s ease-in';
                 }
             });
         });
@@ -257,33 +257,153 @@ document.addEventListener('DOMContentLoaded', function () {
         }
     });
 
-     // <a href="#" class="btn">Add to cart <i class="fa-solid fa-cart-shopping"></i></a>
+    // const navSnippet = document.querySelector('.nav-snippet');
+
+    // function navInteract() {
+    //     window.addEventListener('scroll', () => {
+    //         navSnippet.style.position = 'fixed';
+    //     });
+    // }
+
+    // Call the function to set up the scroll event listener
+    // navInteract();
+
+    // checkout section
+    const cartCheckOut = document.querySelector('.cart-checkout');
+    const cart = document.querySelector('.cart');
+    // cart.addEventListener('click', function () {
+    //     event.preventDefault();
+    //     cartCheckOut.style.transition = 'transform 1s ease';
+    //     cartCheckOut.style.transform = 'translateX(0px)';
+    //     cartCheckOut.style.display = 'block';
+
+
+    // });
+
+    const overlay = document.querySelector(".overlay");
+
+    const cartCheckOutClassList = cartCheckOut.classList;
+    console.log(cartCheckOutClassList)
+    
+    cart.addEventListener('click', (e) => {
+        e.preventDefault()
+        cartCheckOut.classList.add("open");
+        overlay.classList.add("open")
+    } )
+    
+    function closingCheckout(){
+           
+        if(cartCheckOutClassList.contains("open")) {
+            cartCheckOut.classList.remove("open");
+            overlay.classList.remove("open")
+        }
+    }
+    
+    const cartClose = document.querySelector('.cart-close');
+    cartClose.addEventListener('click', function (e) {
+        e.preventDefault();
+        closingCheckout();
+     
+    });
+
+    overlay.addEventListener("click", (e) => {
+        closingCheckout();
+
+    })
+    // slider();
+
+    // if(slider){
+    //     cartCheckOut.style.display = 'none';
+    //     // cartCheckOut.style.display = 'none';
+
+    // } else{
+    //     cartCheckOut.style.display = 'block';
+    // }
+
+
+
+    (function () {
+
+        // Adding the Product Item
+        const addtocart = document.querySelectorAll(".btnCart");
+        addtocart.forEach (function (btn) {
+            btn.addEventListener('click', function(event) {
+    
+                // Fetch Image 
+                let imgPath = event.target.parentElement.previousElementSibling.children[0].src;
+               
+                // Fetch Product Name
+                let productName = event.target.previousElementSibling.previousElementSibling.textContent;
+    
+                // Fetch Product Cost
+                let productCost = event.target.previousElementSibling.textContent;
+                let finalPrice = productCost.slice(3).trim();
+    
+                // Initialize Item Description
+                const item = {};
+                    item.img = imgPath;
+                    item.name = productName;
+                    item.price = finalPrice;
+    
+                // Create the List Item
+                const cartItem = document.createElement('li');
+                cartItem.classList.add('product-cart-item');
+                cartItem.innerHTML = `
+                    <img src="${item.img}" alt="" class="cart-img">
+                    <div class="cart-text">
+                        <h3> ${item.name} </h3>
+                        <p class="price">KES ${item.price}</p>
+                    </div>
+                    <i class="fas fa-times remove-product"></i> 
+                `;
+    
+                // Insert Product Item Into Cart as a List Item
+                const cartList = document.querySelector('.cart-list'); 
+                cartList.appendChild(cartItem); 
+                alert('Item added to cart.');
+    
+                // Remove Product List on Remove Button Click -- !DOES NOT WORK! --
+                const removeBtn = document.querySelectorAll('.remove-product')
+                removeBtn.forEach (function (rBtn) {
+                    rBtn.addEventListener('click', function () {
+                        cartItem.remove();
+                    });
+                }); 
+    
+                // Update Total
+                // showTotals();
+    
+            });
+        });
+    });
+
+
 
 
     // search bar
 
-    
-        const searchBtn = document.getElementById('searchBtn');
-        const searchInput = document.getElementById('searchInput');
-    
-        searchBtn.addEventListener('click', function () {
-            const searchTerm = searchInput.value.trim();
-            if (searchTerm !== '') {
-                // Perform search operation or redirect to search results page
-                alert('Searching for: ' + searchTerm);
-                window.location.href = `results.
+
+    const searchBtn = document.getElementById('searchBtn');
+    const searchInput = document.getElementById('searchInput');
+
+    searchBtn.addEventListener('click', function () {
+        const searchTerm = searchInput.value.trim();
+        if (searchTerm !== '') {
+            // Perform search operation or redirect to search results page
+            alert('Searching for: ' + searchTerm);
+            window.location.href = `results.
                 html?search=${searchTerm}`;
-            } else {
-                alert('Please enter a search term.');
-            }
-        });
-    
-        // Enable pressing 'Enter' key to trigger search
-        searchInput.addEventListener('keypress', function (e) {
-            if (e.key === 'Enter') {
-                searchBtn.click();
-            }
-        });
+        } else {
+            alert('Please enter a search term.');
+        }
+    });
+
+    // Enable pressing 'Enter' key to trigger search
+    searchInput.addEventListener('keypress', function (e) {
+        if (e.key === 'Enter') {
+            searchBtn.click();
+        }
+    });
 
 
     // filter by category
@@ -308,13 +428,9 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     });
 
-    
+
 
 });
-
-
-
-
 
 
 
