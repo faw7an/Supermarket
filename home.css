@@ -7,9 +7,11 @@
     padding: 0;
     box-sizing: border-box;
     font-family: 'Montserrat', sans-serif;
-
 }
-
+body {
+    overflow-x: hidden;
+    position: relative;
+}
 /* 
 
 .head {
@@ -52,14 +54,16 @@
 
 
 
+*/
+
 .nav-snippet ul{
     display: flex; 
     flex-direction: row;
     list-style-type: none;
     justify-content: center;
-    background-image: linear-gradient(to left,#419cbd, #0b0e0f);
-    margin-left: 300px;
+    margin-left: 260px;
     margin-right: 200px;
+
     border-radius: 0 0 100px 100px ;
     
     
@@ -73,19 +77,97 @@
     
 }
 .nav-snippet ul li a{
-    color: white;
-    padding: 15px;
-    border-radius: 50px;
+    color: black;
+    padding: 10px;
     transition: color 0.4s ease-in-out, background-color 0.4s ease-in-out; 
 }
 
-
 .nav-snippet ul li a:hover{
     color: black;
+    /* padding-right: 8px;
+    padding-left: 8px; */
     background-color: white;
+    border-top: 1.5px solid#061423;
+    border-radius: 20px;
+    /* box-shadow: inset 0px 3px 10px grey; */
+    /* border: 1px solid #061423; */
         
-} */
+} 
 
+.nav-snippet ul li a i{
+    margin-right: 5px;
+}
+
+
+/* CART SECTION */
+.cart-checkout{
+    width: 350px;
+    position: fixed;
+    z-index: 1000;
+    right: 0px;
+    top: 0;
+    background-color: whitesmoke;
+    padding: 30px;
+    height:630px;
+    transform: translateX(360px);
+    transition: transform 1s ease;
+}
+
+.cart-checkout.open {
+    display: block;
+    transform: translateX(0%);
+    transition: transform 1s ease;
+}
+
+
+.checkout{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+    background-color:#7EC015;
+    border: none;
+    padding: 5px 20px 5px 20px;
+    color: white;
+    font-size: 15px;
+    border-radius: 3px;
+    width: 150px;
+    color: white;
+}
+
+.overlay {
+    background-color: #0614235f;
+    z-index: 1000;
+    position: absolute;
+    transform: translateX(100%);
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+}
+.overlay.open{
+    transform: translateX(0%);
+}
+
+.emptycart{
+    margin-top: 10px;
+    background-color:#7EC015;
+    border: none;
+    padding: 5px 20px 5px 20px;
+   color: white;
+    font-size: 15px;
+    border-radius: 3px;
+    width: 150px;
+}
+
+ .emptycart:hover{
+    background-color:#72B20C;
+    color: white;
+}  
+ .checkout:hover{
+    background-color:#72B20C;
+    color: white;}
 .hero {
     background-image: url('https://naivas.online/nakuru-westside/modules/zoneslideshow/views/img/slideImages/1710842011.jpg');
     /* Specify the URL of your background image */
@@ -240,6 +322,8 @@
 
 #elect .card-content {
     margin-top: 120px;
+    border-radius: 20px 0 0 20px;
+    padding-left: 40px;
 }
 /* end of electronic formating section */
 
@@ -269,6 +353,8 @@
 
 #td-deals .card-content {
     margin-top: 120px;
+    border-radius: 20px 0 0 20px;
+    padding-left: 40px;
 }
 
 
@@ -526,3 +612,35 @@ input::placeholder {
 a {
     text-decoration: none;
 }
+
+/* Add to cart button style */
+
+.btnCart{
+    width: 180px;
+    height: 40px;
+    position: relative;
+    margin-left: 40px;
+    margin-top: 10px;
+    
+}
+
+.btnCart button{
+    border-radius: 30px;
+    background: #f83e25;
+    border: none;
+    padding: 10px 20px 10px 20px;
+    font-size: 0.9rem;
+    color: white;
+    cursor: pointer;
+    outline: none;
+    box-shadow: 0px 5px 5px rgb(145, 145, 145) ;
+}
+
+.minusBtn, .plusBtn{
+    display: none;
+    font-weight: 700;
+
+}
+
+
+/* cart */

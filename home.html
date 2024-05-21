@@ -20,107 +20,151 @@
         <h1>Welcome to Our E-commerce Store</h1>
         <p>Discover amazing products and great deals!</p>
     </div>
-    <hr>
-    
-    <div class="search-container">
-        <input type="text" id="searchInput" placeholder="Search...">
-        <button id="searchBtn"><i class="fas fa-search"></i></button>
-    </div>
+    <div class="sub-body">
+        <nav class="nav-snippet">
+            <ul>
+                <li><a href="home.html"><i class="fa-solid fa-store"></i>On Sale</a></li>
+                <li><a href="#"><i class="fa-solid fa-tag"></i>Products</a></li>
+                <li><a href="#"><i class="fa-solid fa-layer-group"></i>Category</a></li>
+                <!-- <li><a href="#">About Us</a></li> -->
+                <li><a href="#"><i class="fa-regular fa-user"></i>Profile</a></li>
+                <li class="cart"><a href="#"><i class="fa-solid fa-cart-shopping"></i>Cart</a></li>
+                <li><a href="#"><i class="fa-brands fa-opencart"></i>Voucher</a></li>
 
-    <div class="main">
-        <h2 class="hd">Featured Products:
-            <a href="#" style="font-size: 18px; font-weight: lighter; margin: 10px; color: red; ">show more <i
-                    class="fa-solid fa-arrow-right"></i></a>
-        </h2>
-        <div id="ft-prod" class="container"></div>
+            </ul>
+        </nav>
+        <hr>
 
-        <h2 class="hd">Today's Deals:<a href="#"
-                style="font-size: 18px; font-weight: lighter; margin: 10px; color: red; ">show more <i
-                    class="fa-solid fa-arrow-right"></i></a></h2>
-        <div id="td-deals" class="container wide-container"></div>
+        <div class="search-container">
+            <input type="text" id="searchInput" placeholder="Search...">
+            <button id="searchBtn"><i class="fas fa-search"></i></button>
+        </div> 
+        <div class="slide" id="slide">
+            <div class="overlay"></div>
+        <div class="cart-checkout" id="cart-checkout">
+            <button class="cart-close">X</button>
+            <h3>Shopping Cart</h3>
+            <hr>
+            <div class="cart-list">
 
-        <h2 class="hd">Electronics:<a href="#"
-                style="font-size: 18px; font-weight: lighter; margin: 10px; color: red; ">show more <i
-                    class="fa-solid fa-arrow-right"></i></a></h2>
-        <div class="elect-layout">
-        </div>
-        <div id="elect" class="container"></div>
-
-        <h2 class="hd">Personal Care:<a href="#"
-                style="font-size: 18px; font-weight: lighter; margin: 10px; color: red; ">show more <i
-                    class="fa-solid fa-arrow-right"></i></a></h2>
-        <div class="pers-layout">
-
-        </div>
-        <div id="personal" class="container"></div>
-
-        <h2 class="hd">Liquor:<a href="#" style="font-size: 18px; font-weight: lighter; margin: 10px; color: red; ">show
-                more <i class="fa-solid fa-arrow-right"></i></a></h2>
-        <div class="liq-layout">
-
-        </div>
-        <div id="liq" class="container"></div>
-
-        <h2 class="hd">Fresh Foods:<a href="#"
-                style="font-size: 18px; font-weight: lighter; margin: 10px; color: red; ">show more <i
-                    class="fa-solid fa-arrow-right"></i></a></h2>
-        <div class="fre-layout"></div>
-        <div id="fre-f" class="container"></div>
-
-    </div>
-
-    <!-- constant footer section -->
-    <footer>
-        <div class="container-footer">
-            <div class="col1">
-                <p>Our Company</p>
-                <div class="sub-col1">
-                    <li>
-                        <a href="#">About Us</a>
-                    </li>
-                    <li>
-                        <a href="#">Delivery Information</a>
-                    </li>
-                    <li>
-                        <a href="#">Privacy and Policy</a>
-                    </li>
-                    <li>
-                        <a href="#">Terms and Conditions</a>
-                    </li>
-                </div>
             </div>
-            <div class="col2">
-                <h3>Newsletter</h3>
-                <div class="form-news">
-                    <input type="text" class="form-control" id="form-news" placeholder="Email Address">
-                    <button type="submit" class="btn btn-primary mb-2" id="subscribe">Subscribe</button>
-                </div>
-            </div>
-            <div class="col3">
-                <h3>BRAND NAME</h3>
-                <h2>Contact us</h2>
-                <p>Email:brand-name@gmail.com</p>
-                <p>
-                    <i class="fa-regular fa-address-book"></i>Address: P.O. BOX 61600- 00200, <br>Nairobi, Kenya
+            <!-- <p>There are 2 items in your cart</p> -->
+            <div class="subtotal">
+                <p>Subtotal</p>
+                <p>KES
+                <p class="sub-totalCalc"></p>
                 </p>
-                <div class="social-icons">
-                    <a href="#" class="social-icon">
-                        <i class="fa-brands fa-google-plus-g"></i>
-                    </a>
-                    <a href="#" class="social-icon">
-                        <i class="fa-brands fa-facebook-f"></i>
-                    </a>
-                    <a href="#" class="social-icon">
-                        <i class="fa-brands fa-instagram"></i>
-                    </a>
-                    <a href="#" class="social-icon">
-                        <i class="fa-brands fa-linkedin-in"></i>
-                    </a>
-                </div>
+            </div>
+            <div class="subtotal">
+                <p>Delivery</p>
+                <p>Free</p>
+            </div>
+            <div class="total">
+                <p>Total (tax incl.)</p>
+                <p class="totalCal"></p>
+            </div>
+            <div class="checkbtn">
+                <button class="emptycart">EMPTY CART</button>
+                <button class="checkout">CHECKOUT</button>
+            </div>
+            </div>
+
+        </div>
+        <div class="main">
+            <h2 class="hd">Featured Products:
+                <a href="#" style="font-size: 18px; font-weight: lighter; margin: 10px; color: red; ">show more <i
+                        class="fa-solid fa-arrow-right"></i></a>
+            </h2>
+            <div id="ft-prod" class="container"></div>
+
+            <h2 class="hd">Today's Deals:<a href="#"
+                    style="font-size: 18px; font-weight: lighter; margin: 10px; color: red; ">show more <i
+                        class="fa-solid fa-arrow-right"></i></a></h2>
+            <div id="td-deals" class="container wide-container"></div>
+
+            <h2 class="hd">Electronics:<a href="#"
+                    style="font-size: 18px; font-weight: lighter; margin: 10px; color: red; ">show more <i
+                        class="fa-solid fa-arrow-right"></i></a></h2>
+            <div class="elect-layout">
+            </div>
+            <div id="elect" class="container"></div>
+
+            <h2 class="hd">Personal Care:<a href="#"
+                    style="font-size: 18px; font-weight: lighter; margin: 10px; color: red; ">show more <i
+                        class="fa-solid fa-arrow-right"></i></a></h2>
+            <div class="pers-layout">
 
             </div>
+            <div id="personal" class="container"></div>
+
+            <h2 class="hd">Liquor:<a href="#"
+                    style="font-size: 18px; font-weight: lighter; margin: 10px; color: red; ">show
+                    more <i class="fa-solid fa-arrow-right"></i></a></h2>
+            <div class="liq-layout">
+
+            </div>
+            <div id="liq" class="container"></div>
+
+            <h2 class="hd">Fresh Foods:<a href="#"
+                    style="font-size: 18px; font-weight: lighter; margin: 10px; color: red; ">show more <i
+                        class="fa-solid fa-arrow-right"></i></a></h2>
+            <div class="fre-layout"></div>
+            <div id="fre-f" class="container"></div>
+
         </div>
-    </footer>
+
+        <!-- constant footer section -->
+        <footer>
+            <div class="container-footer">
+                <div class="col1">
+                    <p>Our Company</p>
+                    <div class="sub-col1">
+                        <li>
+                            <a href="#">About Us</a>
+                        </li>
+                        <li>
+                            <a href="#">Delivery Information</a>
+                        </li>
+                        <li>
+                            <a href="#">Privacy and Policy</a>
+                        </li>
+                        <li>
+                            <a href="#">Terms and Conditions</a>
+                        </li>
+                    </div>
+                </div>
+                <div class="col2">
+                    <h3>Newsletter</h3>
+                    <div class="form-news">
+                        <input type="text" class="form-control" id="form-news" placeholder="Email Address">
+                        <button type="submit" class="btn btn-primary mb-2" id="subscribe">Subscribe</button>
+                    </div>
+                </div>
+                <div class="col3">
+                    <h3>BRAND NAME</h3>
+                    <h2>Contact us</h2>
+                    <p>Email:brand-name@gmail.com</p>
+                    <p>
+                        <i class="fa-regular fa-address-book"></i>Address: P.O. BOX 61600- 00200, <br>Nairobi, Kenya
+                    </p>
+                    <div class="social-icons">
+                        <a href="#" class="social-icon">
+                            <i class="fa-brands fa-google-plus-g"></i>
+                        </a>
+                        <a href="#" class="social-icon">
+                            <i class="fa-brands fa-facebook-f"></i>
+                        </a>
+                        <a href="#" class="social-icon">
+                            <i class="fa-brands fa-instagram"></i>
+                        </a>
+                        <a href="#" class="social-icon">
+                            <i class="fa-brands fa-linkedin-in"></i>
+                        </a>
+                    </div>
+
+                </div>
+            </div>
+        </footer>
 </body>
 
 </html>
