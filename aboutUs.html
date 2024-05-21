@@ -1,6 +1,6 @@
-
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -12,54 +12,148 @@
       margin: 0;
       padding: 0;
     }
+
     header {
       background-color: #333;
       color: #fff;
       padding: 20px;
       text-align: center;
     }
+
     main {
       padding: 40px;
     }
-    h1, h2 {
+
+    h1,
+    h2 {
       text-align: center;
     }
+
     .about-section {
       margin-bottom: 40px;
+      display: flex;
+      flex-direction: row;
     }
+
     .about-section p {
       line-height: 1.5;
     }
+    .abtsect2{
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-row: auto;
+    }
+
     footer {
       background-color: #333;
       color: #fff;
       padding: 20px;
       text-align: center;
     }
+
+    .backImg {
+      background-image: url('about image 4.jpg');
+      /* Specify the URL of your background image */
+      background-size: cover;
+      /* Cover the entire background */
+      background-position: center;
+      /* Center the background image */
+      background-repeat: no-repeat;
+      /* Prevent background image from repeating */
+      height: 500px;
+
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      grid-template-rows: auto;
+    }
+
+    .backImg h2 {
+      color: rgb(148, 100, 10);
+      font-size: 40px;
+      justify-content: center;
+      align-items: center;
+    }
+
+
+    .backImg p {
+      justify-content: center;
+      align-items: center;
+      margin-left: 130px;
+      font-size: 20px;
+      color: white;
+      font-weight: bold;
+    }
+
+    .column {
+      justify-content: center;
+      align-items: center;
+    }
   </style>
 </head>
+
 <body>
   <header>
     <h1>Supermarket Name</h1>
   </header>
   <main>
-    <h2>About Us</h2>
+    <h2>Welcome to Supermarket Name</h2>
     <div class="about-section">
-      <h3>Our Story</h3>
-      <p>Supermarket Name has been serving the local community for over [X] years. We started as a small family-owned grocery store and have grown to become a trusted destination for all your shopping needs.</p>
+      <div class="sect1">
+        <h3>Our mission</h3>
+        <p>We believe that technology has the potential to transform everyday life in Africa, for the better. We built
+          Jumia to help consumers access millions of goods and services conveniently and at the best prices while
+          opening
+          up a new way for sellers to reach consumers and grow their businesses.</p>
+      </div>
+      <img src="about image 1.jpg" alt="about image 1">
     </div>
-    <div class="about-section">
-      <h3>Our Mission</h3>
-      <p>Our mission is to provide our customers with the highest quality products, exceptional service, and a pleasant shopping experience. We are committed to supporting local businesses, promoting sustainability, and giving back to the community.</p>
+    <h3>What we do</h3>
+    <div class="abtsect2">
+      <div class="abtsect2-1">
+        <img src="about image 2.jpg" alt="about image 2">
+        <h3>Serving Consumers</h3>
+        <p>Supermarket Name delivers innovative, convenient and affordable online services to consumers in Africa that
+          help them fulfil their everyday needs.</p>
+      </div>
+      <div class="abtsect2-2">
+        <img src="about image 3.jpg" alt="about image 3">
+        <h3>Empowering businesses</h3>
+        <p>Supermarket Name takes African economies online, helping small and large businesses grow and reach new
+          consumers, empowering a new generation to build their lives and make their communities better.</p>
+      </div>
     </div>
-    <div class="about-section">
-      <h3>Our Values</h3>
-      <p>At Supermarket Name, we value integrity, innovation, and a customer-centric approach. We strive to create a welcoming and inclusive environment for all our customers, and we take pride in our commitment to excellence.</p>
+
+
+    <div class="backImg">
+      <div class="column">
+        <h2>868+ Million</h2>
+        <p style="margin-left: 90px;">Visits on the website in 2023 </p>
+      </div>
+      <div class="column">
+        <h2>64k+</h2>
+        <p>Active Sellers </p>
+      </div>
+      <div class="column">
+        <h2>Every 2 seconds</h2>
+        <p style="margin-left: 90px;">One transaction is done </p>
+      </div>
+      <div class="column">
+        <h2>21.3 Million</h2>
+        <p>Orders in 2023</p>
+      </div>
+      <div class="column">
+        <h2>220+ Million</h2>
+        <p>Products</p>
+      </div>
+      <div class="column">
+        <h2>5.7 Million</h2>
+        <p style="margin-left: 90px;">Active Consumers across Africa</p>
+      </div>
     </div>
   </main>
   <footer>
     <p>&copy; [Current Year] Supermarket Name. All rights reserved.</p>
   </footer>
 </body>
-</html>
 
+</html>
