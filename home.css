@@ -104,11 +104,12 @@ body {
     width: 350px;
     position: fixed;
     z-index: 1000;
+    overflow-y: scroll;
     right: 0px;
     top: 0;
     background-color: whitesmoke;
     padding: 30px;
-    height:630px;
+    height:100vh;
     transform: translateX(360px);
     transition: transform 1s ease;
 }
@@ -624,7 +625,7 @@ a {
     
 }
 
-.btnCart button{
+.mainBtn{
     border-radius: 30px;
     background: #f83e25;
     border: none;
@@ -635,12 +636,12 @@ a {
     outline: none;
     box-shadow: 0px 5px 5px rgb(145, 145, 145) ;
 }
-
+/* 
 .minusBtn, .plusBtn{
     display: none;
     font-weight: 700;
 
-}
+} */
 
 
 /* cart */
