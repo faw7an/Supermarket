@@ -1,4 +1,5 @@
-function toggleEdit() {
+document.addEventListener("DOMContentLoaded", function(){
+  function toggleEdit() {
     const profileInfo = document.querySelector('.profile-info');
     const profileForm = document.querySelector('#profile-form');
     const editButton = document.querySelector('#edit-profile');
@@ -57,3 +58,4 @@ function toggleEdit() {
     }
   });
   
+});

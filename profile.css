@@ -71,4 +71,31 @@ body {
     border-radius: 50%;
     object-fit: cover;
   }
-    
+
+  .prof-layout{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
+    margin: 10px;
+  }
+ 
+  
+input[type="text"], 
+input[type="email"]{
+    width: 100%;
+    padding: 5px;
+    margin: 5px;
+    background-color: transparent;
+    border: 1px solid #33797f;
+    box-sizing: border-box;
+}
+
+.prof-btn{
+  margin: 10px;
+}
+
+
+
+
+
+

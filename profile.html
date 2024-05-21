@@ -5,18 +5,19 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>User Profile</title>
   <link rel="stylesheet" href="profile.css">
-  <script src="script.js"></script>
+  <script src="profile.js"></script>
 
 </head>
 <body>
 
 <header>
-  <h1>Fresh Supermarket</h1>
+  <h1>Shift Supermarket</h1>
   <nav>
     <ul>
       <li><a href="#">Home</a></li>
       <li><a href="#">Products</a></li>
       <li><a href="#">Cart</a></li>
+      <li><a href="#">Voucher</a></li>
       <li><a href="#">Profile</a></li>
     </ul>
   </nav>
@@ -41,6 +42,7 @@
     </div>
     
     <form id="profile-form" style="display: none;">
+      <div class="prof-layout">
       <label for="edit-username">Username:</label>
       <input type="text" id="edit-username" name="edit-username">
       
@@ -52,9 +54,11 @@
       
       <label for="edit-profile-picture">Profile Picture:</label>
       <input type="file" id="edit-profile-picture" name="edit-profile-picture" accept="image/*">
-      
+    </div>
+    <div class="prof-btn">
       <button type="submit">Save</button>
       <button type="button" id="cancel-edit">Cancel</button>
+    </div>
     </form>
     
     <button id="edit-profile">Edit Profile</button>
@@ -62,7 +66,7 @@
 </main>
 
 <footer>
-  <p>&copy; 2024 Fresh Supermarket. All rights reserved.</p>
+  <p>&copy; 2024 Shift Supermarket. All rights reserved.</p>
 </footer>
 
 </body>
