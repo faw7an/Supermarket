@@ -70,13 +70,13 @@
             transition: color 0.4s ease-in-out, background-color 0.4s ease-in-out;
         }
 
-        .nav-snippet ul li a:hover {
+        /* .nav-snippet ul li a:hover {
             color: black;
             background-color: white;
             border-top: 1.5px solid#061423;
             border-radius: 20px;
 
-        }
+        } */
 
         .nav-snippet ul li a i {
             margin-right: 5px;
@@ -93,6 +93,7 @@
 
         .div1 {
             display: flex;
+            flex-wrap: wrap;
             flex-direction: column;
             width: 30%;
             height: fit-content;
@@ -143,7 +144,70 @@
 
 
 
+/* CSS for larger screens */
+ @media (min-width: 1200px) {
+    .nav-snippet ul li a:hover {
+            color: black;
+            background-color: white;
+            border-top: 1.5px solid#061423;
+            border-radius: 20px;
 
+        }
+} 
+
+/* CSS for medium screens */
+/* @media (min-width: 768px) and (max-width: 1199px) {
+  .body {
+    display: flex;
+    flex-direction: column;
+  }
+  .div1, .div2 {
+    width: 100%;
+  }
+}  */
+
+/* CSS for small screens */
+ @media (max-width: 767px) {
+    body{     
+    overflow-x: hidden;
+   
+    }
+  .body {
+    display: flex;
+    flex-direction: column;
+  }
+  .div1{
+    width: 60%;
+  }
+  .div2 {
+    width: 90%;
+    margin-top: 30px;
+  }
+  .nav-snippet{
+    width: 140%;
+    display: flex;
+    flex-wrap: wrap;
+   
+
+  }
+  .nav-snippet ul li{
+    margin: 0;
+  }
+  .nav-snippet ul{
+    width: 35%;
+  }
+  .nav-snippet ul li a{
+    font-size: smaller;
+    display: flex;
+    flex-wrap: wrap;
+   
+  }
+  .nav-snippet ul li a:hover {
+            color: black;
+           transform: scale(1.1);
+        }
+
+} 
 
         /* footer part */
 
@@ -156,7 +220,7 @@
             text-align: center;
             padding: 10px 0;
             display: grid;
-            grid-template-columns: 1fr 1fr 1fr;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
             /* Three columns */
             grid-template-rows: auto;
             /* Let rows adjust based on content */
@@ -377,6 +441,29 @@
                 </div>
             </div>
         </footer>
+        <script>
+            const btnSubmit = document.querySelector('.sub-submit');
+
+
+      function validateForm(event) {
+            event.preventDefault();  // Prevent the default form submission
+
+            var subject = document.getElementById('subject').value;
+            var email = document.getElementById('email').value;
+            var file = document.getElementById('file').value;
+            var message = document.getElementById('message').value;
+
+            if (subject === "" || email === "" || file === "" || message === "") {
+                alert("All fields must be filled out");
+                return false;
+            } else {
+                alert('Thank you for contacting us. We will get back to you soon');
+                // You can submit the form here if needed
+                document.getElementById('contactForm').submit();
+            }
+        };
+        btnSubmit.addEventListener('click', validateForm);
+        </script>
 </body>
 
 </html>
