@@ -239,6 +239,7 @@ body {
     
 .social-icons {
     margin: 20px 0;
+    display: none;
 }
 
 .social-icons a {
@@ -250,6 +251,7 @@ body {
     margin: 0 3px;
     border: 1px solid #ccc;
     border-radius: 20%;
+    display: none;
    
 
 }
