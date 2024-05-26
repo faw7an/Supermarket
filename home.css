@@ -365,7 +365,7 @@ padding-left: 8px; */
 }
 
 .hero {
-    background-image: url('https://naivas.online/nakuru-westside/modules/zoneslideshow/views/img/slideImages/1710842011.jpg');
+    background-image: url('./assets/images/1710842011.jpg');
     /* Specify the URL of your background image */
     background-size: cover;
     /* Cover the entire background */
