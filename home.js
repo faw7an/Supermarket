@@ -244,65 +244,81 @@ document.addEventListener("DOMContentLoaded", function () {
       closingCheckout();
     });
   
-    // Add to Cart Functionality
-    function addToCart(btnElements) {
-      btnElements.forEach(function (btn) {
-        btn.addEventListener("click", function (event) {
-          // Fetch the closest parent card
-          let card = event.target.closest(".card");
-  
-          // Fetch Image
-          let imgPath = card.querySelector(".card-img").src;
-  
-          // Fetch Product Name
-          let productName = card.querySelector(".card-title").textContent;
-  
-          // Fetch Product Cost
-          let productCost = card.querySelector(".price").textContent;
-          let finalPrice = productCost.slice(4).trim(); // slice(4) to remove "KES "
-  
-          // Initialize Item Description
-          const item = {};
-          item.img = imgPath;
-          item.name = productName;
-          item.price = finalPrice;
-  
-          // Create the List Item
-          const cartItem = document.createElement("li");
-          cartItem.classList.add("product-cart-item");
-          cartItem.innerHTML = `
-                  <img src="${item.img}" alt="" class="cart-img">
-                  <div class="cart-text">
-                      <h3> ${item.name} </h3>
-                      <p class="price">KES ${item.price}</p>
-                  </div>
-                  <i class="fas fa-times remove-product"></i> 
-              `;
-  
-          // Insert Product Item Into Cart as a List Item
-          const cartList = document.querySelector(".cart-list");
-          // Before adding an item to the cart list first console log to confirm the item details
-          console.log(item);
-          cartList.appendChild(cartItem);
-          alert("Item added to cart.");
-  
-          // Remove Product List on Remove Button Click -- !DOES NOT WORK! --
-          const removeBtn = document.querySelectorAll(".remove-product");
-          removeBtn.forEach(function (rBtn) {
-            rBtn.addEventListener("click", function () {
-              cartItem.remove();
-            });
-          });
-  
+  // Add to Cart Functionality
+function addToCart(btnElements) {
+  btnElements.forEach(function (btn) {
+    btn.addEventListener("click", function (event) {
+      // Fetch the closest parent card
+      let card = event.target.closest(".card");
+
+      // Fetch Image
+      let imgPath = card.querySelector(".card-img").src;
+
+      // Fetch Product Name
+      let productName = card.querySelector(".card-title").textContent;
+
+      // Fetch Product Cost
+      let productCost = card.querySelector(".price").textContent;
+      let finalPrice = productCost.slice(4).trim(); // slice(4) to remove "KES "
+
+      // Initialize Item Description
+      const item = {};
+      item.img = imgPath;
+      item.name = productName;
+      item.price = finalPrice;
+
+      // Create the List Item
+      const cartItem = document.createElement("li");
+      cartItem.classList.add("product-cart-item");
+      cartItem.innerHTML = `
+              <img src="${item.img}" alt="" class="cart-img">
+              <div class="cart-text">
+                  <h3> ${item.name} </h3>
+                  <p class="price">KES ${item.price}</p>
+              </div>
+              <i class="fas fa-times remove-product"></i> 
+          `;
+
+      // Insert Product Item Into Cart as a List Item
+      const cartList = document.querySelector(".cart-list");
+      // Before adding an item to the cart list first console log to confirm the item details
+      console.log(item);
+      cartList.appendChild(cartItem);
+      alert("Item added to cart.");
+
+      // Update Total
+      calculateTotal();
+
+      // Remove Product List on Remove Button Click
+      const removeBtn = document.querySelectorAll(".remove-product");
+      removeBtn.forEach(function (rBtn) {
+        rBtn.addEventListener("click", function () {
+          cartItem.remove();
           // Update Total
-          // showTotals();
+          calculateTotal();
         });
       });
-    }
-  
-    const addtocartButtons = document.querySelectorAll(".mainBtn");
-  
-    addToCart(addtocartButtons);
+    });
+  });
+}
+
+function calculateTotal() {
+  // Get all the prices from the cart items
+  let prices = Array.from(document.querySelectorAll('.product-cart-item .price')).map(priceElement => parseFloat(priceElement.textContent.slice(4)));
+
+  // Calculate the subtotal
+  let subtotal = prices.reduce((total, price) => total + price, 0);
+
+  // Display the subtotal
+  document.querySelector('.sub-totalCalc').textContent = subtotal.toFixed(2);
+
+  // Since delivery is free, the total is the same as the subtotal
+  document.querySelector('.totalCal').textContent = subtotal.toFixed(2);
+}
+
+const addtocartButtons = document.querySelectorAll(".mainBtn");
+
+addToCart(addtocartButtons);
   
     // search bar
   
