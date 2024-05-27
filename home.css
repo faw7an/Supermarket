@@ -588,7 +588,7 @@ padding-left: 8px; */
 
 /* end of card styling */
 .elect-layout {
-    background-image: url('https://naivas.online/nakuru-westside/c/1260-category_default/electronics.jpg');
+    background-image: url('/assets/images/electronics.jpg');
     /* Specify the URL of your background image */
     background-size: cover;
     /* Cover the entire background */
@@ -606,7 +606,7 @@ padding-left: 8px; */
 }
 
 .pers-layout {
-    background-image: url('https://naivas.online/nakuru-westside/c/1258-category_default/beauty-cosmetics.jpg');
+    background-image: url('/assets/images/beauty-cosmetics.jpg');
     /* Specify the URL of your background image */
     background-size: cover;
     /* Cover the entire background */
@@ -624,7 +624,7 @@ padding-left: 8px; */
 }
 
 .liq-layout {
-    background-image: url('https://naivas.online/nakuru-westside/c/1500-category_default/wine.jpg');
+    background-image: url('/assets/images/wine.jpg');
     /* Specify the URL of your background image */
     background-size: cover;
     /* Cover the entire background */
@@ -642,7 +642,7 @@ padding-left: 8px; */
 }
 
 .fre-layout {
-    background-image: url('https://naivas.online/nakuru-westside/c/1381-category_default/fresh-food.jpg');
+    background-image: url('/assets/images/fresh-food.jpg');
     /* Specify the URL of your background image */
     background-size: cover;
     /* Cover the entire background */

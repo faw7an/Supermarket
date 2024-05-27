@@ -41,151 +41,151 @@ document.addEventListener("DOMContentLoaded", function () {
     // Append product cards to the container
     ft_prod.append(
       makeItem(
-        "Item 1",
+        "Oats Morning harvest",
         "https://naivas.online/nakuru-westside/88448-medium_default/morning-harvest-super-fast-oats-sachet-1kg.jpg",
-        "Description of item 1",
+        "",
         20
       ),
       makeItem(
-        "Item 1",
-        "https://naivas.online/nakuru-westside/88448-medium_default/morning-harvest-super-fast-oats-sachet-1kg.jpg",
-        "Description of item 1",
-        20
+        "Bio greek yogurt",
+        "https://naivas.online/water-front/104043-medium_default/bio-greek-vanilla-yoghurt-200ml.jpg",
+        "",
+        150
       ),
       makeItem(
-        "Item 1",
-        "https://naivas.online/nakuru-westside/88448-medium_default/morning-harvest-super-fast-oats-sachet-1kg.jpg",
-        "Description of item 1",
-        20
+    "Mika kettle",
+        "https://naivas.online/water-front/101165-medium_default/mika-kettle-17l-plastic-corded-open-element-cream-white-blackmkt1002wb.jpg",
+        "",
+        150
       ),
       makeItem(
-        "Item 1",
-        "https://naivas.online/nakuru-westside/88448-medium_default/morning-harvest-super-fast-oats-sachet-1kg.jpg",
-        "Description of item 1",
-        20
+        "Sollatek fridge guard",
+        "https://naivas.online/water-front/87289-medium_default/sollatek-fridge-guard-06-amps.jpg",
+        "",
+        1500
       )
     );
   
     td_deals.append(
       makeItem(
-        "Item 1",
-        "https://naivas.online/nakuru-westside/88448-medium_default/morning-harvest-super-fast-oats-sachet-1kg.jpg",
-        "Description of item 1",
-        20
+        "Hand mixer",
+        "https://naivas.online/water-front/87382-medium_default/ramtons-hand-mixer-rm382.jpg",
+        "",
+        1200
       ),
       makeItem(
-        "Item 1",
-        "https://naivas.online/nakuru-westside/88448-medium_default/morning-harvest-super-fast-oats-sachet-1kg.jpg",
-        "Description of item 1",
-        20
+        "Instant shower ballo",
+        "https://naivas.online/water-front/87269-medium_default/lorenzetti-instant-shower-bello-banho-ultra.jpg",
+        "",
+        4370
       )
     );
   
     elect.append(
       makeItem(
-        "Item 1",
-        "https://naivas.online/nakuru-westside/88448-medium_default/morning-harvest-super-fast-oats-sachet-1kg.jpg",
-        "Description of item 1",
-        20
+        "Water dispenser",
+        "https://naivas.online/water-front/101013-medium_default/von-vadz0002k-portable-water-dispenser.jpg",
+        "",
+        3400
       ),
       makeItem(
-        "Item 1",
-        "https://naivas.online/nakuru-westside/88448-medium_default/morning-harvest-super-fast-oats-sachet-1kg.jpg",
-        "Description of item 1",
-        20
+        "Mika steam iron",
+        "https://naivas.online/water-front/101224-medium_default/mika-steam-iron-non-stick-soleplate-white-blue-1600wmsti405.jpg",
+        "",
+        3200
       ),
       makeItem(
-        "Item 1",
-        "https://naivas.online/nakuru-westside/88448-medium_default/morning-harvest-super-fast-oats-sachet-1kg.jpg",
-        "Description of item 1",
-        20
+        "Go-Tv decorder",
+        "https://naivas.online/water-front/87287-medium_default/gotv-decoder.jpg",
+        "",
+        2200
       ),
       makeItem(
-        "Item 1",
-        "https://naivas.online/nakuru-westside/88448-medium_default/morning-harvest-super-fast-oats-sachet-1kg.jpg",
-        "Description of item 1",
-        20
+        "50-inch smart TV",
+        "https://naivas.online/water-front/101002-medium_default/lg-50uq75006lg-50-inches-4k-smart-led-tv.jpg",
+        "",
+        75730
       )
     );
   
     liq.append(
       makeItem(
-        "Item 1",
-        "https://naivas.online/nakuru-westside/88448-medium_default/morning-harvest-super-fast-oats-sachet-1kg.jpg",
-        "Description of item 1",
-        20
+        "Kumla merlot",
+        "https://naivas.online/water-front/97147-medium_default/kumala-merlot-750ml.jpg",
+        "",
+        1595
       ),
       makeItem(
-        "Item 1",
-        "https://naivas.online/nakuru-westside/88448-medium_default/morning-harvest-super-fast-oats-sachet-1kg.jpg",
-        "Description of item 1",
-        20
+        "Gato negro",
+        "https://naivas.online/water-front/101874-medium_default/gato-negro-sweet-muscato-750ml.jpg",
+        "",
+        1320
       ),
       makeItem(
-        "Item 1",
-        "https://naivas.online/nakuru-westside/88448-medium_default/morning-harvest-super-fast-oats-sachet-1kg.jpg",
-        "Description of item 1",
-        20
+        "Kumala chandoney",
+        "https://naivas.online/water-front/101874-medium_default/gato-negro-sweet-muscato-750ml.jpg",
+        "",
+        1537
       ),
       makeItem(
-        "Item 1",
-        "https://naivas.online/nakuru-westside/88448-medium_default/morning-harvest-super-fast-oats-sachet-1kg.jpg",
-        "Description of item 1",
-        20
+        "Perdeberg Merlot",
+        "https://naivas.online/water-front/97143-medium_default/perdeberg-merlot-750ml.jpg",
+        "",
+        2450
       )
     );
   
     personal.append(
       makeItem(
-        "Item 1",
-        "https://naivas.online/nakuru-westside/88448-medium_default/morning-harvest-super-fast-oats-sachet-1kg.jpg",
-        "Description of item 1",
-        20
+        "Nivea deep men roll-on",
+        "https://naivas.online/water-front/85039-medium_default/nivea-deep-men-roll-on-50ml.jpg",
+        "",
+        650
       ),
       makeItem(
-        "Item 1",
-        "https://naivas.online/nakuru-westside/88448-medium_default/morning-harvest-super-fast-oats-sachet-1kg.jpg",
-        "Description of item 1",
-        20
+        "Vaseline baby petroleum jelly",
+        "https://naivas.online/water-front/96393-medium_default/vaseline-baby-petroleum-jelly-250ml.jpg",
+        "",
+        260
       ),
       makeItem(
-        "Item 1",
-        "https://naivas.online/nakuru-westside/88448-medium_default/morning-harvest-super-fast-oats-sachet-1kg.jpg",
-        "Description of item 1",
-        20
+        "Always maxi-thin long",
+        "https://naivas.online/water-front/84099-medium_default/always-maxi-thin-long-duo-32-pieces.jpg",
+        "",
+        485
       ),
       makeItem(
-        "Item 1",
-        "https://naivas.online/nakuru-westside/88448-medium_default/morning-harvest-super-fast-oats-sachet-1kg.jpg",
-        "Description of item 1",
-        20
+        "Colgate toothpaste",
+        "https://naivas.online/water-front/96884-medium_default/colgate-toothpaste-total-12-clean-mint-75ml.jpg",
+        "",
+        510
       )
     );
   
     fre_f.append(
       makeItem(
-        "Item 1",
-        "https://naivas.online/nakuru-westside/88448-medium_default/morning-harvest-super-fast-oats-sachet-1kg.jpg",
-        "Description of item 1",
-        20
+        "Kunde bunch",
+        "https://naivas.online/water-front/104712-medium_default/kunde-bunch.jpg",
+        "",
+        35
       ),
       makeItem(
-        "Item 1",
-        "https://naivas.online/nakuru-westside/88448-medium_default/morning-harvest-super-fast-oats-sachet-1kg.jpg",
-        "Description of item 1",
-        20
+        "Goat leg steaks",
+        "https://naivas.online/water-front/89378-medium_default/naivas-goat-leg-steaks-500g.jpg",
+        "",
+        799
       ),
       makeItem(
-        "Item 1",
-        "https://naivas.online/nakuru-westside/88448-medium_default/morning-harvest-super-fast-oats-sachet-1kg.jpg",
-        "Description of item 1",
-        20
+        "Rabbit meat",
+        "https://naivas.online/water-front/89379-medium_default/naivas-rabbit-meat-500g.jpg",
+        "",
+        690
       ),
       makeItem(
-        "Item 1",
-        "https://naivas.online/nakuru-westside/88448-medium_default/morning-harvest-super-fast-oats-sachet-1kg.jpg",
-        "Description of item 1",
-        20
+        "White cremini mushrooms",
+        "https://naivas.online/water-front/103771-medium_default/white-cremini-mushrooms-500g.jpg",
+        "",
+        599
       )
     );
   
