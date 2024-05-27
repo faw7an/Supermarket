@@ -5,20 +5,23 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Qix Mart about us</title>
-  <link rel="icon" href="./assets/images/q.png">  <style>
+  <link rel="icon" href="./assets/images/q.png">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+    <style>
     /* Add your CSS styles here */
     body {
       font-family: Arial, sans-serif;
       margin: 0;
       padding: 0;
     }
-
+/* 
     header {
       background-color: #333;
       color: #fff;
       padding: 20px;
       text-align: center;
-    }
+    } */
 
     main {
       padding: 40px;
@@ -43,13 +46,13 @@
       grid-template-columns: 1fr 1fr;
       grid-row: auto;
     }
-
+/* 
     footer {
       background-color: #333;
       color: #fff;
       padding: 20px;
       text-align: center;
-    }
+    } */
 
     .backImg {
       background-image: url('/assets/about\ image\ 4.jpg');
@@ -88,15 +91,239 @@
       justify-content: center;
       align-items: center;
     }
+    .container-footer {
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    /* Three columns */
+    grid-template-rows: auto;
+    /* Let rows adjust based on content */
+}
+
+
+.container-footer {
+    color: white;
+    padding-top: 20px;
+    padding-bottom: 0;
+    background-image: linear-gradient(60deg, #162125, #062f3c);
+}
+
+.col1 {
+    position: relative;
+    bottom: 0;
+    list-style: none;
+    color: white;
+
+}
+
+.sub-col1 li a {
+    color: white;
+}
+
+
+input[type="text"] {
+    width: 70%;
+    padding: 10px;
+    background-color: transparent;
+    border: 1px solid white;
+    border-radius: 20px;
+    color: white;
+    box-sizing: border-box;
+}
+
+input::placeholder {
+    color: white;
+}
+
+.form-news {
+    padding-top: 10px;
+}
+
+
+#subscribe {
+    width: 50%;
+    font-family: 'Times New Roman';
+    padding: 10px 20px 10px 20px;
+    border: none;
+    color: white;
+    font-size: larger;
+    border-radius: 20px;
+    cursor: pointer;
+    margin-top: 20px;
+    margin-bottom: 18px;
+    background-image: linear-gradient(45deg, #111b21, #505a50);
+    background-position: right;
+}
+
+
+#subscribe:hover {
+    background-position: left;
+    transition: background-position 0.5s ease-in;
+    transform: scale(1.01);
+    background-image: linear-gradient(45deg, #505a50, #111b21);
+    /* box-shadow: 0 2px 5px rgba(12, 10, 10, 0.5); */
+}
+
+#subscribe:active {
+    transform: scale(0.9);
+}
+
+
+
+.social-icons {
+    margin: 20px 0;
+}
+
+.social-icons a {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    color: white;
+    height: 40px;
+    margin: 0 3px;
+    border: 1px solid #ccc;
+    border-radius: 20%;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+a {
+    text-decoration: none;
+}
+
+/* CSS for larger screens */
+@media (min-width: 1200px) {
+
+.nav-snippet ul {
+    display: flex;
+    flex-direction: row;
+    list-style-type: none;
+    justify-content: center;
+    margin-left: 260px;
+    margin-right: 100px;
+    /* border-radius: 0 0 100px 100px; */
+    /* background-color: #333; */
+
+
+
+}
+
+.nav-snippet ul li {
+    padding: 10px;
+    margin: 5px;
+    transition: transform 1s ease-in-out;
+
+
+
+}
+
+.nav-snippet ul li a {
+    color: black;
+    padding: 10px;
+    transition: color 0.4s ease-in-out, background-color 0.4s ease-in-out;
+
+
+}
+
+.nav-snippet ul li a:hover {
+    color: black;
+    transform: scale(1.1);
+    transition: transform 1s ease-in-out;
+    /* padding-right: 8px;
+padding-left: 8px; */
+    background-color: white;
+    border-top: 1.5px solid#061423;
+    border-radius: 20px;
+    /* box-shadow: inset 0px 3px 10px grey; */
+    /* border: 1px solid #061423; */
+
+}
+
+.nav-snippet ul li a i {
+    margin-right: 5px;
+}
+
+}
+
+/* CSS for medium screens */
+@media (min-width: 768px) and (max-width: 1199px) {
+
+.nav-snippet ul {
+    display: flex;
+    flex-direction: row;
+    list-style-type: none;
+    justify-content: center;
+    /* margin-left: 200px; */
+    width: 100%;
+    /* margin-right: 100px; */
+    border-radius: 0 0 100px 100px;
+
+
+}
+
+.nav-snippet ul li {
+    padding: 10px;
+    margin: 5px;
+    display: flex;
+    flex-wrap: wrap;
+
+
+
+}
+
+.nav-snippet ul li a {
+    color: black;
+    padding: 10px;
+    transition: color 0.4s ease-in-out, background-color 0.4s ease-in-out;
+    
+}
+
+.nav-snippet ul li a:hover {
+    color: black;
+    transform: scale(1.1);
+    /* padding-right: 8px;
+padding-left: 8px; */
+    /* background-color: white; */
+    border-top: 1.5px solid#061423;
+    border-radius: 20px;
+    /* box-shadow: inset 0px 3px 10px grey; */
+    /* border: 1px solid #061423; */
+
+}
+
+.nav-snippet ul li a i {
+    margin-right: 5px;
+}
   </style>
 </head>
 
 <body>
   <header>
-    <h1>Supermarket Name</h1>
+    <!-- <h1>Qix Mart</h1> -->
   </header>
+  <nav class="nav-snippet">
+    <ul>
+        <li><a href="home.html"><i class="fa-solid fa-store"></i>On Sale</a></li>
+        <!-- <li><a href="#"><i class="fa-solid fa-tag"></i>Products</a></li> -->
+        <!-- <li><a href="#"><i class="fa-solid fa-layer-group"></i>Category</a></li> -->
+        <!-- <li><a href="#">About Us</a></li> -->
+        <li><a href="profile.html"><i class="fa-regular fa-user"></i>Profile</a></li>
+        <li class="cart"><a href="#"><i class="fa-solid fa-cart-shopping"></i>Cart</a></li>
+        <li><a href="#"><i class="fa-brands fa-opencart"></i>Voucher</a></li>
+        <li><a href="contactUs.html"><i class="fa-solid fa-phone"></i>Contact Us</a></li>
+        <li><a href="aboutUs.html"><i class="fa-solid fa-circle-info"></i>About Us</a></li>
+
+    </ul>
+</nav>
   <main>
-    <h2>Welcome to Supermarket Name</h2>
+    <h2>Welcome to Qix Mart</h2>
     <div class="about-section">
       <div class="sect1">
         <h3>Our mission</h3>
@@ -151,9 +378,60 @@
       </div>
     </div>
   </main>
-  <footer>
-    <p>&copy; [Current Year] Supermarket Name. All rights reserved.</p>
-  </footer>
+
+      <!-- constant footer section -->
+      <footer>
+        <div class="container-footer">
+            <div class="col1">
+                <p>Our Company</p>
+                <div class="sub-col1">
+                    <li>
+                        <a href="#">About Us</a>
+                    </li>
+                    <li>
+                        <a href="#">Delivery Information</a>
+                    </li>
+                    <li>
+                        <a href="#">Privacy and Policy</a>
+                    </li>
+                    <li>
+                        <a href="#">Terms and Conditions</a>
+                    </li>
+                </div>
+            </div>
+            <div class="col2">
+                <h3>Newsletter</h3>
+                <div class="form-news">
+                    <input type="text" class="form-control" id="form-news" placeholder="Email Address">
+                    <button type="submit" class="btn btn-primary mb-2" id="subscribe">Subscribe</button>
+                </div>
+            </div>
+            <div class="col3">
+                <h1>QIX MART</h1>
+                <h2>Contact us</h2>
+                <p>Email:brand-name@gmail.com</p>
+                <p>
+                    <i class="fa-regular fa-address-book"></i>Address: P.O. BOX 61600- 00200, <br>Nairobi, Kenya
+                </p>
+                <div class="social-icons">
+                    <a href="#" class="social-icon">
+                        <i class="fa-brands fa-google-plus-g"></i>
+                    </a>
+                    <a href="#" class="social-icon">
+                        <i class="fa-brands fa-facebook-f"></i>
+                    </a>
+                    <a href="#" class="social-icon">
+                        <i class="fa-brands fa-instagram"></i>
+                    </a>
+                    <a href="#" class="social-icon">
+                        <i class="fa-brands fa-linkedin-in"></i>
+                    </a>
+                </div>
+
+            </div>
+        </div>
+    </footer>
+ 
 </body>
 
 </html>
