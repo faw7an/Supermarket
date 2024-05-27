@@ -801,3 +801,35 @@ a {
 
 
 /* cart */
+.product-cart-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #ccc;
+    padding: 10px;
+}
+
+.product-cart-item .cart-img {
+    width: 50px;
+    height: 50px;
+}
+
+.product-cart-item .cart-text {
+    flex-grow: 1;
+    padding: 0 10px;
+}
+
+.product-cart-item .cart-text h3 {
+    margin: 0;
+    font-size: 16px;
+}
+
+.product-cart-item .cart-text .price {
+    color: #888;
+    font-size: 14px;
+}
+
+.product-cart-item .remove-product {
+    color: #f00;
+    cursor: pointer;
+}
